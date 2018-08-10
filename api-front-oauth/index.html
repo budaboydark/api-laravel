@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>reveal.js</title>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/black.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section data-background="#dddddd">
+                <h2 style="color:#df570d;font-family: 'Ubuntu', sans-serif;">API FRONT</h2>
+                <hr>
+                <h2 style="color:#df570d;font-family: 'Ubuntu', sans-serif;">LARAVEL</h2>
+                </hr>
+            </section>
+            <section data-background="#dddddd" style="font-family: 'Ubuntu', sans-serif;">
+                <section id="fragments">
+                    <h2 style="color:#df570d;font-family: 'Ubuntu', sans-serif;">Autenticação do usuário</h2>
+                    <p style="text-align: left;font-family: 'Ubuntu', sans-serif;">
+                        <span>Rotas:</span>
+                        <br>
+                        <span style="text-align: left;font-size:28px;font-family: 'Ubuntu', sans-serif;">
+                             /oauth/login <br>
+                             /oauth/login-vendedor
+                        </span>
+                    </p>
+                    <p style="text-align: left;">Autenticação no padrão <a href="https://jwt.io/">JWT</a>(JSON Web Token)</p>
+                </section>
+                <section>
+                    <h3 style="color:#df570d;">/oauth/login</h3>
+                    <p style="text-align: left;">
+                        <span style="font-size: 24px;">Método (POST)</span>
+                        <br>
+                        <span style="font-size: 20px;">Headers:</span>
+                        <span style="font-size: 20px;">*Authorization: enviar token de autenticação da loja</span>
+                        <pre>
+                            <code style="font-size: 14px;" class="hljs" data-trim >
+                [ 
+                    "Authorization" => "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIs
+                    Imp0aSI6IjQzNGI2OGVhZTczMDFhZmZiNzM1N2U2NTE4Y2FiZDgwOWJkOWQxYWZ
+                    iZDRjNDJkMzA2NWRjZGE3YmU4NzM0Nzg2ZWUyZGZlODRhOTgxZDRhIn0.eyJhdW
+                    QiOiIzIiwianRpIjoiNDM0YjY4ZWFlNzMwMWFmZmI3MzU3ZTY1MThjYWJkODA5Y
+                    dAInKVJEhM5e0Bb-RjIo3vKDzYlAubnwvuvEa-gXVMqm7fqYAPCRXayQDSezB-A
+                    dlzKvF1VLhAX1YQTGHTjzNPWQjl25dxUdqyfaRt_TkdtP-KfdhZooPxhpcCtx7f
+                    VVqIWUqp28YW0t_8_lb9axVBGo......"
+                    "Content-Type" => "application/x-www-form-urlencoded" 
+                ]
+                        </code>
+                        </pre>
+                    </p>
+                </section>
+                <section>
+                    <h3 style="color:#df570d">/oauth/login</h3>
+                    <p style="text-align: left;">
+                        <span style="font-size: 24px;">Método (POST)</span>
+                        <br>
+                        <span style="font-size: 20px;">Body:</span>
+                        <pre>
+                            <code style="font-size: 14px;" class="hljs" data-trim >
+                                    [ 
+                                        "email" => "email@email.com"
+                                        "password" => "teste123" 
+                                    ]
+                            </code>
+                        </pre>
+                    </p>
+                </section>
+                <section>
+                    <h3 style="color:#df570d">/oauth/login</h3>
+                    <p style="text-align: left;">
+                        <span style="font-size: 24px;">Método (POST)</span>
+                        <br>
+                        <span style="font-size: 20px;">Retorno JSON:</span>
+                        <pre>
+                            <code style="font-size: 14px;" class="hljs" data-trim >
+                                {
+                                    "token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImp0aSI6IjJjOWE2
+                                    ZDZlZDE3NzJkNWNlYzdmNDc0Zjk3NDdlNDM1MWJlOGFlNzYifQ.eyJpc3MiOi
+                                    JodHRwOlwvXC8xOTIuMTY4LjAuNDQ6ODA4MFwvZjF3ZWJzZXJ2aWNlc1wvcHV
+                                    ibGljXC9hcGlcL2xvZ2luLXZlbmRlZG9yIiwiYXVkIjoiaHR0cDpcL1wvMTky",
+                                    "email":"email@email.com",
+                                    "nome":"john"
+                                }
+                            </code>
+                        </pre>
+                    </p>
+                </section>
+                <section>
+                    <h3 style="color:#df570d">/oauth/login-vendedor</h3>
+                </section>
+            </section>
+            <section data-background="#dddddd">
+                <h2 style="color:#df570d">Documentação</h2>
+            </section>
+        </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+        // More info about config & dependencies:
+        // - https://github.com/hakimel/reveal.js#configuration
+        // - https://github.com/hakimel/reveal.js#dependencies
+        Reveal.initialize({
+            dependencies: [{
+                src: 'plugin/markdown/marked.js'
+            }, {
+                src: 'plugin/markdown/markdown.js'
+            }, {
+                src: 'plugin/notes/notes.js',
+                async: true
+            }, {
+                src: 'plugin/highlight/highlight.js',
+                async: true,
+                callback: function() {
+                    hljs.initHighlightingOnLoad();
+                }
+            }]
+        });
+    </script>
+</body>
+
+</html>
