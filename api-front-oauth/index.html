@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <title>reveal.js</title>
+    <title>Api-Front-Doc</title>
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
     <link rel="stylesheet" href="css/reveal.css">
     <link rel="stylesheet" href="css/theme/black.css">
@@ -31,6 +31,80 @@
                 <hr>
                 <h2 style="color:#df570d;font-family: 'Ubuntu', sans-serif;">LARAVEL</h2>
                 </hr>
+            </section>
+            <section data-background="#dddddd">
+                <section>
+                    <h2 style="color:#df570d;font-family: 'Ubuntu', sans-serif;">Autenticação da Loja</h2>
+                    <p style="text-align: left;font-family: 'Ubuntu', sans-serif;">
+                        <span>Rotas:</span>
+                        <br>
+                        <span style="text-align: left;font-size:24px;font-family: 'Ubuntu', sans-serif;">
+                             /oauth/token
+                        </span>
+                        <br>
+                        <span style="font-size: 28px;">Método (POST)</span>
+                        <br>
+                        <span style="font-size: 20px;">Headers:</span>
+                        <pre>
+                            <code style="font-size: 14px;" class="hljs" data-trim >
+                                [ 
+                                    "Content-Type" => "application/x-www-form-urlencoded",
+                                    "Accept" => "application/json"
+                                ]
+                            </code>
+                        </pre>
+                    </p>
+                </section>
+                <section>
+                    <h2 style="color:#df570d;font-family: 'Ubuntu', sans-serif;">Autenticação da Loja</h2>
+                    <p style="text-align: left;font-family: 'Ubuntu', sans-serif;">
+                        <span style="font-size: 28px;">Método (POST)</span>
+                        <br>
+                        <span style="font-size: 20px;">Body: Exemplo</span>
+                        <br>
+                        <span style="font-size: 20px;">
+                             (client_id,client_secret) : são gerados na hora da criação de usuário e cliente da loja no webservice.
+                        </span>
+                        <br>
+                        <pre>
+                            <code style="font-size: 14px;" class="hljs" data-trim >
+                                [ 
+                                    "grant_type" => "client_credentials",
+                                    "client_id" => 3,
+                                    "client_secret" => "bzTOSfPTDJBnlnD3bMHgiUDShk9wEGY6jkzGvjAZ",
+                                    "scope" => "*"
+                                ]
+                            </code>
+                        </pre>
+                    </p>
+                </section>
+                <section>
+                    <h2 style="color:#df570d;font-family: 'Ubuntu', sans-serif;">Autenticação da Loja</h2>
+                    <p style="text-align: left;font-family: 'Ubuntu', sans-serif;">
+                        <span style="font-size: 28px;">Método (POST)</span>
+                        <br>
+                        <span style="font-size: 20px;">Retorno JSON</span>
+                        <br>
+                        <pre>
+                            <code style="font-size: 14px;" class="hljs" data-trim >
+{ 
+    "token_type": "Bearer", 
+    "expires_in": 63158399, 
+    "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImNiYmZhZjVlZTYz
+    NWZkOGYwOWE3YzgxZWEwYTJiMTFhMGUwNTk5Y2VkMDI1NjJmMjE4YjU5NzQ5Njc2MzE5OTRmY2E4N
+    DFlZWQ4Yjc4YjM1In0.eyJhdWQiOiIzIiwianRpIjoiY2JiZmFmNWVlNjM1ZmQ4ZjA5YTdjODFlYT
+    BhMmIxMWEwZTA1OTljZWQwMjU2MmYyMThiNTk3NDk2NzYzMTk5NGZjYTg0MWVlZDhiNzhiMzUiLCJ
+    q4dkeF2jq6yjUGNIwkVlZFCbDEg8aXqCoCQoIHqZPUAjOl84cUY6y0zmXtJS2EfsUCeRRcFRookmi
+    wJ0T1l63P4OLVte3PMWWhrp17W_Zlx-4UYtSvb0m-ib76w7oSjOoc4VuTl9GVkN9JJco7VtcDlqWg
+    Q2Ejw336mDkGk8VQEdTlEIK8ytSDUhUZiRVglZ-1ShJMIENI9jaNJrmunjALzgzi-YUi6pUgx7W2f
+    Q4Mei0uydLRsAnlUnq_-_mSzMkZbdsbmmJoF2TxsZ2OXdoEIIKXOkc742VK1JmRxXDjYwYpEyTbbz
+    sDOScxf3c"
+}
+                            </code>
+                        </pre>
+                    </p>
+                </section>
+
             </section>
             <section data-background="#dddddd" style="font-family: 'Ubuntu', sans-serif;">
                 <section id="fragments">
