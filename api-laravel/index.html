@@ -182,13 +182,30 @@
                     <h3 style="color:#df570d">/oauth/login-vendedor</h3>
                 </section>
             </section>
-            <!--
-                DOCUMENTAÇÃO
-            -->
             <section data-background="#dddddd" style="font-family: 'Ubuntu', sans-serif;">
-                <h2 style="color:#df570d;">Documentaçãos</h2>
-                <p style="font-family: 'Ubuntu', sans-serif;">
-                    <span>Rotas Disponíveis:</span>
+                <h2 style="color:#df570d;font-family: 'Ubuntu', sans-serif;">Documentação</h2>
+                <p style="text-align: left;">
+                    <span>Rotas Disponíveis [GET]:</span>
+                    <br>
+                    <span style="font-size: 16px;">
+                        Headers: ["Authorization" => "Bearer {token_loja}","Content-Type"=>"application/json","Accept"=>"application/json"]
+                    <br />
+                    Exemplo: http://192.168.0.44:8080/f1webservices/public/api/front-api/produtos/{id?}</span>
+                    <br>
+                    <pre>
+                        <code style="font-size: 14px;" class="hljs" data-trim>
+- /produtos/{id?}
+- /produtos?busca=exemplo
+- /produtos?largura=300&altura=400
+
+- /menus
+- /configuracoes
+- /redessociais
+- /banners
+- /vitrines
+- /marcas/{id?}
+                        </code>
+                    </pre>
                 </p>
             </section>
         </div>
